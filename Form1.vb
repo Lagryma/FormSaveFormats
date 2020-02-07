@@ -80,7 +80,7 @@ Public Class Form1
     End Sub
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Status.ForeColor = Color.DarkViolet
+        Status.ForeColor = Color.DarkOrange
         Status.Text = "Welcome!"
     End Sub
 
