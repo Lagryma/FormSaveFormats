@@ -80,7 +80,8 @@ Public Class Form1
     End Sub
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Status.Text = ""
+        Status.ForeColor = Color.DarkViolet
+        Status.Text = "Welcome!"
     End Sub
 
     Function isBlank() As Boolean
