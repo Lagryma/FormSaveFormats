@@ -1,0 +1,14 @@
+C:\Users\RYAN\source\repos\FormSaveFormats\bin\Debug\FormSaveFormats.exe.config
+C:\Users\RYAN\source\repos\FormSaveFormats\bin\Debug\FormSaveFormats.exe
+C:\Users\RYAN\source\repos\FormSaveFormats\bin\Debug\FormSaveFormats.pdb
+C:\Users\RYAN\source\repos\FormSaveFormats\bin\Debug\FormSaveFormats.xml
+C:\Users\RYAN\source\repos\FormSaveFormats\obj\Debug\FormSaveFormats.vbprojAssemblyReference.cache
+C:\Users\RYAN\source\repos\FormSaveFormats\obj\Debug\FormSaveFormats.Form1.resources
+C:\Users\RYAN\source\repos\FormSaveFormats\obj\Debug\FormSaveFormats.Resources.resources
+C:\Users\RYAN\source\repos\FormSaveFormats\obj\Debug\FormSaveFormats.vbproj.GenerateResource.cache
+C:\Users\RYAN\source\repos\FormSaveFormats\obj\Debug\FormSaveFormats.exe
+C:\Users\RYAN\source\repos\FormSaveFormats\obj\Debug\FormSaveFormats.xml
+C:\Users\RYAN\source\repos\FormSaveFormats\obj\Debug\FormSaveFormats.pdb
+C:\Users\RYAN\source\repos\FormSaveFormats\bin\Debug\Newtonsoft.Json.dll
+C:\Users\RYAN\source\repos\FormSaveFormats\bin\Debug\Newtonsoft.Json.xml
+C:\Users\RYAN\source\repos\FormSaveFormats\obj\Debug\FormSaveFormats.vbproj.CopyComplete
