@@ -31,6 +31,7 @@ Partial Class Form1
         Me.SaveTxt = New System.Windows.Forms.Button()
         Me.SaveXml = New System.Windows.Forms.Button()
         Me.SaveJson = New System.Windows.Forms.Button()
+        Me.Status = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'Label1
@@ -130,11 +131,23 @@ Partial Class Form1
         Me.SaveJson.Text = "Save as JSON"
         Me.SaveJson.UseVisualStyleBackColor = False
         '
+        'Status
+        '
+        Me.Status.AutoSize = True
+        Me.Status.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Status.ForeColor = System.Drawing.Color.Red
+        Me.Status.Location = New System.Drawing.Point(17, 212)
+        Me.Status.Name = "Status"
+        Me.Status.Size = New System.Drawing.Size(212, 20)
+        Me.Status.TabIndex = 9
+        Me.Status.Text = "SAMPLE SAMPLE SAMPLE"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(584, 254)
+        Me.Controls.Add(Me.Status)
         Me.Controls.Add(Me.SaveJson)
         Me.Controls.Add(Me.SaveXml)
         Me.Controls.Add(Me.SaveTxt)
@@ -160,4 +173,5 @@ Partial Class Form1
     Friend WithEvents SaveTxt As Button
     Friend WithEvents SaveXml As Button
     Friend WithEvents SaveJson As Button
+    Friend WithEvents Status As Label
 End Class

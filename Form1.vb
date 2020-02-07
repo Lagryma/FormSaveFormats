@@ -22,36 +22,72 @@ Public Class Form1
     End Sub
 
     Private Sub SaveTxt_Click(sender As Object, e As EventArgs) Handles SaveTxt.Click
-        My.Computer.FileSystem.WriteAllText(PATH & ".txt", "", True)
-        Dim objWriter As New System.IO.StreamWriter(PATH & ".txt")
+        If isBlank() Then
+            My.Computer.FileSystem.WriteAllText(PATH & ".txt", "", True)
+            Dim objWriter As New System.IO.StreamWriter(PATH & ".txt")
 
-        objWriter.WriteLine("Name:" & ControlChars.Tab & ControlChars.Tab & TextName.Text)
-        objWriter.WriteLine("Age:" & ControlChars.Tab & ControlChars.Tab & TextAge.Text)
-        objWriter.WriteLine("Address:" & ControlChars.Tab & TextAddress.Text)
+            objWriter.WriteLine("Name:" & ControlChars.Tab & ControlChars.Tab & TextName.Text)
+            objWriter.WriteLine("Age:" & ControlChars.Tab & ControlChars.Tab & TextAge.Text)
+            objWriter.WriteLine("Address:" & ControlChars.Tab & TextAddress.Text)
 
-        objWriter.Close()
+            objWriter.Close()
+
+            Status.ForeColor = Color.Green
+            Status.Text = "Successfully saved as TXT format."
+        Else
+            Status.ForeColor = Color.Red
+            Status.Text = "Please fill up all inputs."
+        End If
     End Sub
 
     Private Sub SaveXml_Click(sender As Object, e As EventArgs) Handles SaveXml.Click
-        Dim xmlDeclaration As New XDeclaration("1.0", "UTF-8", "yes")
-        Dim doc As XDocument =
-            New XDocument(xmlDeclaration,
-                          New XElement("Form",
-                                       New XElement("name", "" & TextName.Text),
-                                       New XElement("age", "" & TextAge.Text),
-                                       New XElement("address", "" & TextAddress.Text)
-                                      )
-                          )
+        If isBlank() Then
+            Dim xmlDeclaration As New XDeclaration("1.0", "UTF-8", "yes")
+            Dim doc As XDocument =
+                New XDocument(xmlDeclaration,
+                              New XElement("Form",
+                                           New XElement("name", "" & TextName.Text),
+                                           New XElement("age", "" & TextAge.Text),
+                                           New XElement("address", "" & TextAddress.Text)
+                                          )
+                              )
 
-        doc.Save(PATH & ".xml")
+            doc.Save(PATH & ".xml")
+
+            Status.ForeColor = Color.Green
+            Status.Text = "Successfully saved as XML format."
+        Else
+            Status.ForeColor = Color.Red
+            Status.Text = "Please fill up all inputs."
+        End If
     End Sub
 
     Private Sub SaveJson_Click(sender As Object, e As EventArgs) Handles SaveJson.Click
-        Dim inp As formInput = New formInput()
-        inp.name = TextName.Text
-        inp.age = Convert.ToInt32(TextAge.Text)
-        inp.address = TextAddress.Text
+        If isBlank() Then
+            Dim inp As formInput = New formInput()
+            inp.name = TextName.Text
+            inp.age = Convert.ToInt32(TextAge.Text)
+            inp.address = TextAddress.Text
 
-        My.Computer.FileSystem.WriteAllText(PATH & "JSON.txt", JsonConvert.SerializeObject(inp, Newtonsoft.Json.Formatting.Indented), False)
+            My.Computer.FileSystem.WriteAllText(PATH & "JSON.txt", JsonConvert.SerializeObject(inp, Newtonsoft.Json.Formatting.Indented), False)
+
+            Status.ForeColor = Color.Green
+            Status.Text = "Successfully saved as JSON format."
+        Else
+            Status.ForeColor = Color.Red
+            Status.Text = "Please fill up all inputs."
+        End If
     End Sub
+
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Status.Text = ""
+    End Sub
+
+    Function isBlank() As Boolean
+        If TextName.Text = "" Or TextAge.Text = "" Or TextAddress.Text = "" Then
+            isBlank = False
+        Else
+            isBlank = True
+        End If
+    End Function
 End Class
